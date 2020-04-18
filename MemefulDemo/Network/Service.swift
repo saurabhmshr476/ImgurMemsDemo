@@ -17,7 +17,7 @@ enum NetworkConfig {
 
 
 
-//MARK: - Netwrok Service class
+//MARK: - Netwrok Service
 
 class Service{
     

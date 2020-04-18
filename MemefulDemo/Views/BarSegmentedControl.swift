@@ -8,9 +8,14 @@
 
 import UIKit
 
+
+//MARK: - Segment control protocol
+
 protocol BarSegmentedControlDelegate:class {
     func changeToIndex(index:Int)
 }
+
+//MARK: - Segment control view
 
 class BarSegmentedControl: UIView {
     private var buttonTitles:[String]!
@@ -68,7 +73,8 @@ class BarSegmentedControl: UIView {
     }
 }
 
-//Configuration View
+//MARK: - Segment control view configuration
+
 extension BarSegmentedControl {
     private func updateView() {
         createButton()

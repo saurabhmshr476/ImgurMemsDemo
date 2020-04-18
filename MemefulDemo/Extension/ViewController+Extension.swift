@@ -39,7 +39,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout,UICollectionVie
 
 
 
-// MARK: - CollectionView Layout
+// MARK: - CollectionView Layout Delegate (for cell height calculation)
 
 extension HomeViewController: MemeslayoutDelegate {
     
@@ -89,7 +89,7 @@ extension HomeViewController: MemeslayoutDelegate {
     
 }
 
-// MARK: - Segmented Control Button chnages
+// MARK: - Segmented Control Delegate method
 
 extension HomeViewController: BarSegmentedControlDelegate {
     func changeToIndex(index: Int) {
