@@ -64,7 +64,15 @@ class HomeViewController: UIViewController {
             }
             self?.indicator.stopAnimating()
             self?.collectionView.isHidden = false
-            self?.memes = memesData!.memes
+            self?.memes = memesData!.memes.filter { (meme) -> Bool in
+                
+                if let animated = meme.images?.first?.animated{
+                    return !animated
+                }
+                
+                return true
+            }
+            
             self?.collectionView.reloadData()
         }
     }

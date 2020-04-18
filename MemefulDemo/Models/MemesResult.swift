@@ -9,8 +9,11 @@
 
 
 struct MemeResult: Decodable {
+    
     let memes:[Meme]
+    
     private enum CodingKeys : String, CodingKey {
         case memes = "data"
     }
+
 }
