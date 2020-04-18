@@ -18,3 +18,30 @@ You can click this button for most viral content . This is the  selected by defa
 
 You can click this button for normal feed content.
 
+
+#### Image data filtering
+
+Some images has property animated is true and it is mp4 file url so cell is not be able to display it . I will remove those memes from my memes item that has image property animated to true.
+
+
+```
+HomeViewController.swift
+
+```
+
+Above Swift file contains code snippet used for filtering the image is as below  
+
+
+```
+.filter { (meme) -> Bool in
+                
+                if let animated = meme.images?.first?.animated{
+
+                    return !animated
+                }
+                
+                return true
+            }
+```
+
+
