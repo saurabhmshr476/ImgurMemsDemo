@@ -85,12 +85,12 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		B73170CC244AFDF000AE3A67 /* Netwrok */ = {
+		B73170CC244AFDF000AE3A67 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				B75398A42449C30000F9FB82 /* Service.swift */,
 			);
-			path = Netwrok;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B73170D3244B048000AE3A67 /* Models */ = {
@@ -140,7 +140,7 @@
 				B73170CB244AFDE500AE3A67 /* Layout */,
 				B73170CA244AFDD700AE3A67 /* Extension */,
 				B73170D3244B048000AE3A67 /* Models */,
-				B73170CC244AFDF000AE3A67 /* Netwrok */,
+				B73170CC244AFDF000AE3A67 /* Network */,
 				B7C8DB7E244B33A200ED5F68 /* Storyboards */,
 				B7C8DB7F244B33B900ED5F68 /* Assets */,
 				B753989C24499A6C00F9FB82 /* Info.plist */,
