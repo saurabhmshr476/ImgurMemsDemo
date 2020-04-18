@@ -53,23 +53,6 @@ You can click this button for most viral content . This is the  selected by defa
 
 You can click this button for normal feed content.
 
-
-### Image data filtering
-
-Some images has property animated is true and it is mp4 file url so cell is not be able to display it . I will remove those memes from my memes item that has image property animated to true.
-
-```
-.filter { (meme) -> Bool in
-                
-                if let animated = meme.images?.first?.animated{
-
-                    return !animated
-                }
-                
-                return true
-            }
-```
-
 ### Nav Bar left Button -   sorting based on upvote point - ascending and descending order
 
 
@@ -91,3 +74,21 @@ Nav bar Left button click sort the result based on points (ascending and descend
 
     }
 ```
+
+### Image data filtering
+
+Some images has property animated is true and it is mp4 file url so cell is not be able to display it . I will remove those memes from my memes item that has image property animated to true.
+
+```
+.filter { (meme) -> Bool in
+                
+                if let animated = meme.images?.first?.animated{
+
+                    return !animated
+                }
+                
+                return true
+            }
+```
+
+
