@@ -70,4 +70,24 @@ Some images has property animated is true and it is mp4 file url so cell is not 
             }
 ```
 
+### Nav Bar left Button -   sorting based on upvote point - ascending and descending order
 
+
+Nav bar Left button click sort the result based on points (ascending and descending order) 
+
+```
+@objc func sortByPoints(sender : UIBarButtonItem){
+
+        if sortByPoint {
+            sortByPoint = false
+            memes = memes.sorted(by: { Int($0.points!) < Int($1.points!) })
+            
+        }else{
+            sortByPoint = true
+            memes = memes.sorted(by: { Int($0.points!) > Int($1.points!) })
+        }
+
+        collectionView.reloadData()
+
+    }
+```
