@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     
     var memes = [Meme]()
     
+    var sortByPoint = false
         
     var networkManager = Service.shared
     
@@ -93,8 +94,11 @@ class HomeViewController: UIViewController {
         leftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         leftBtn.tintColor = .white
         leftBtn.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        leftBtn.addTarget(self, action: #selector(sortByPoints(sender:)), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
         
+    
+
         // right navigation bar button
         let rightBtn = UIButton(type: .system)
         rightBtn.setImage(UIImage(named: "plusbox"), for: .normal)
@@ -111,6 +115,25 @@ class HomeViewController: UIViewController {
         
 
     }
+    
+    // MARK: - Left button Click - sorting
+    
+    @objc func sortByPoints(sender : UIBarButtonItem){
+
+        if sortByPoint {
+            sortByPoint = false
+            memes = memes.sorted(by: { Int($0.points!) < Int($1.points!) })
+            
+        }else{
+            sortByPoint = true
+            memes = memes.sorted(by: { Int($0.points!) > Int($1.points!) })
+        }
+
+        collectionView.reloadData()
+
+    }
+    
+    
 }
 
 
