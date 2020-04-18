@@ -1,5 +1,5 @@
 //
-//  MemsSegmentedControl.swift
+//  BarSegmentedControl.swift
 //  MemefulDemo
 //
 //  Created by SAURABH MISHRA on 18/04/20.
